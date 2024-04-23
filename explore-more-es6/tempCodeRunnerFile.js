@@ -1,1 +1,1 @@
-name
+lenovo.speak("Hello");
