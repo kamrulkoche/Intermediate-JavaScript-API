@@ -18,7 +18,7 @@ const prices = products.map((p) => p.price);
 //filter
 
 const expensive = products.filter((p) => p.price > 12000);
-// console.log(expensive);
+ console.log("dsd",expensive);
 
 const Pnames = expensive.map((name) => name.id);
 const num = expensive[0].id;
@@ -28,8 +28,8 @@ const num = expensive[0].id;
 
 //find
 const affordable = products.find((p) => p.price > 12000);
-console.log(affordable);
+//console.log(affordable);
 
 //reduce
 const total = products.reduce((acum, current) => acum + current.price, 0);
-console.log(total);
+//console.log(total);
