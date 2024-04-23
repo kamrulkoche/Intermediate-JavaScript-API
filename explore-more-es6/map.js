@@ -7,6 +7,7 @@ function doubleIt(num) {
     return num * 2;
 }
 
+
 const double2 = n => n * 2;
 
 const result = numbers.map(doubleIt);
