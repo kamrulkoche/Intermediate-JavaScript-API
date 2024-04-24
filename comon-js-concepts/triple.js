@@ -1,5 +1,5 @@
 //always use ===
-//equal comparison doesnt work for non-primitive
+//equal comparison doesn't work for non-primitive
 const first=2;
 const second='2';
 
