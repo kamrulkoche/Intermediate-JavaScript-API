@@ -4,7 +4,7 @@ const loadPhone = async (searchText, isShowAll) => {
   );
   const data = await res.json();
   const phones = await data.data;
-  // console.log(phones.data);
+  console.log("fsdfsd", phones);
   displayPhones(phones, isShowAll);
 };
 
@@ -47,16 +47,27 @@ const displayPhones = (phones, isShowAll) => {
       <div class="card-body">
         <h2 class="card-title">${phone.phone_name}</h2>
         <p>If a dog chews shoes whose shoes does he choose?</p>
-        <div class="card-actions justify-end">
-          <button class="btn btn-primary">Buy Now</button>
+        <div class="card-actions justify-center">
+          <button onClick="handleShowDetails('${phone.slug}')" class="btn btn-primary">Show Details</button>
         </div>
       </div>
       `;
 
     //4. append child
     phoneContainer.appendChild(phoneCard);
-    toggleLoadingSpinner(false);
   });
+  //hide loading spinner
+  toggleLoadingSpinner(false);
+};
+
+const handleShowDetails = async (id) => {
+  console.log("show details", id);
+  //load single phone data
+  const res = await fetch(
+    `https://openapi.programming-hero.com/api/phone/${id}`
+  );
+  const data = await res.json();
+  console.log(data);
 };
 
 // handle search button
