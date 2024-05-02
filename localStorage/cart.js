@@ -7,6 +7,7 @@ const addProduct = () => {
   productField.value = "";
   quantityField.value = "";
   console.log(product, quantity);
+  
 
   displayProduct(product,quantity);
 };
